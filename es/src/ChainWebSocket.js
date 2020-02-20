@@ -69,11 +69,12 @@ var ChainWebSocket = function () {
                     _this.recv_life--;
                     if (_this.recv_life == 0) {
                         console.log('keep alive timeout.');
-                        if (_this.ws.terminate) {
-                            _this.ws.terminate();
-                        } else {
-                            _this.ws.close();
-                        }
+                        // if( this.ws.terminate ) {
+                        //     this.ws.terminate();
+                        // }
+                        // else{
+                        //     this.ws.close();
+                        // }
                         clearInterval(_this.keepalive_timer);
                         _this.keepalive_timer = undefined;
                         return;
